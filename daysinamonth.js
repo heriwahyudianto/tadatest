@@ -6,12 +6,13 @@ const rl = readline.createInterface({
 /**/
   
 let month="";
-let year="";
+let year=0;
 rl.question('Which month do you want? ', (answer) => {
   month=answer;
   rl.question('Which year do you want? ', (answer2) => {
-    year=answer2;
-    console.log(month);
+    year=parseInt(answer2,10);
+    //year=parseInt(year);
+    //console.log(year%4);
     switch(month) {
         case "1":
             console.log(31);
