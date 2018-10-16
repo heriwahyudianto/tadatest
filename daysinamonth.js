@@ -3,16 +3,12 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-/**/
-  
 let month="";
 let year=0;
 rl.question('Which month do you want? ', (answer) => {
   month=answer;
   rl.question('Which year do you want? ', (answer2) => {
     year=parseInt(answer2,10);
-    //year=parseInt(year);
-    //console.log(year%4);
     switch(month) {
         case "1":
             console.log(31);
@@ -54,10 +50,8 @@ rl.question('Which month do you want? ', (answer) => {
         case "12":
             console.log(31);
             break;
-        }
+    }
     rl.close();
   });
-  
-  //rl.close();
 });
   
